@@ -18,8 +18,8 @@ function setup() {
   var val1 = windowWidth/20;
   push();
     translate(windowWidth/2,windowHeight/2);
-for (var y = -windowHeight; y < windowHeight; y+=windowWidth/24){
-  for (var x = -windowWidth; x < windowWidth; x+=windowWidth/24){
+for (var y = -windowHeight; y < 2*windowHeight; y+=windowWidth/24){
+  for (var x = -windowWidth; x < 2*windowWidth; x+=windowWidth/24){
     for(var i = val1; i<=5*val1; i+=val1){
 
 
