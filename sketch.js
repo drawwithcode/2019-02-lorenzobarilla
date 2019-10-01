@@ -5,7 +5,7 @@ function setup() {
   createCanvas(windowWidth,windowHeight);
   background('black');
 
-  translate(windowWidth/2,windowHeight/2);
+
 
   var index = floor(random() * colorList.length);
   var index2 = floor(random() * colorList2.length);
@@ -16,7 +16,8 @@ function setup() {
   noFill();
   strokeWeight(0.50);
   var val1 = windowWidth/20;
-
+  push();
+    translate(windowWidth/2,windowHeight/2);
 for (var y = -windowHeight; y < windowHeight; y+=windowWidth/24){
   for (var x = -windowWidth; x < windowWidth; x+=windowWidth/24){
     for(var i = val1; i<=5*val1; i+=val1){
@@ -42,6 +43,13 @@ for (var y = -windowHeight; y < windowHeight; y+=windowWidth/24){
 
     }
   }
+  pop();
+
+  push();
+  textSize(20);
+  fill(255);
+  text("click to refresh", windowWidth - 250, windowHeight - 50);
+  pop();
 }
 
 }
